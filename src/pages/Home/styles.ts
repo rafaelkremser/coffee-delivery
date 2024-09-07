@@ -1,19 +1,16 @@
 import styled from "styled-components";
 
-import mainBackground from '../../assets/main-background.png'
 import { mixins } from "../../styles/mixins";
 
-
-
-export const HomeContainer = styled.main`
+export const MainContainer = styled.main`
   padding: 0 10rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 4rem;
-  background: url(${mainBackground});
   background-size: cover;
-
+  background-position: center;
+  
   aside {
     display: flex;
     flex-direction: column;
@@ -22,6 +19,14 @@ export const HomeContainer = styled.main`
 
   img {
     height: 22.5rem;
+  }
+
+  .background {
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    width: 100vw;
+    z-index: -1000;
   }
 `
 
@@ -42,3 +47,20 @@ export const TextContainer = styled.article`
   }
 `
 
+export const CoffeesContainer = styled.section`
+  padding: 2rem 10rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.375rem;
+
+  h2 {
+    font-family: ${mixins.fonts.titleL};
+    color: ${props => props.theme['base-subtitle']};
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+`
