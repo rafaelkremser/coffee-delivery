@@ -19,6 +19,10 @@ export const HomeContainer = styled.main`
     flex-direction: column;
     gap: 4rem;
   }
+
+  img {
+    height: 22.5rem;
+  }
 `
 
 export const TextContainer = styled.article`

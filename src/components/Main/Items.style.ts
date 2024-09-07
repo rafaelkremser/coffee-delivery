@@ -17,14 +17,19 @@ const iconVariants = {
 
 export const ItensContainer = styled.footer`
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem 2.5rem;
+  gap: 2.5rem;
   
   section {
     display: flex;
-    align-items: center;
-    gap: .75rem;
-    font-family: ${mixins.fonts.textM};
+    flex-direction: column;
+    gap: 1.25rem 0;
+    
+    div {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-family: ${mixins.fonts.textM};
+    }
   }
 `
 

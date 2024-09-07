@@ -14,7 +14,7 @@ export function Home() {
 
         <Items />
       </aside>
-      <img src={mainIlustration} alt="Ilustração de um copo de café" width={476} height={360} />
+      <img src={mainIlustration} alt="Ilustração de um copo de café" />
     </HomeContainer >
   )
 }
