@@ -23,13 +23,18 @@ export const CoffeeCardContainer = styled.div`
       pointer-events: none;
     }
 
-    span {
-      padding: .25rem .5rem;
-      background-color: ${props => props.theme["yellow-light"]};
-      color: ${props => props.theme["yellow-dark"]};
-      font-family: ${mixins.fonts.tag};
-      text-transform: uppercase;
-      border-radius: 100px;
+    div {
+      display: flex;
+      gap: .25rem;
+      
+      span {
+        padding: .25rem .5rem;
+        background-color: ${props => props.theme["yellow-light"]};
+        color: ${props => props.theme["yellow-dark"]};
+        font-family: ${mixins.fonts.tag};
+        text-transform: uppercase;
+        border-radius: 100px;
+      }
     }
   }
 

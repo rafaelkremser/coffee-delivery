@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { CoffeeCardContainer, StyledWrapper } from "./styles";
 
-import expressoTradicional from "../../../assets/coffees/expresso.png"
 import { Minus, Plus, ShoppingCartSimple } from "@phosphor-icons/react";
 
-export function CoffeeCard() {
+interface CoffeeCardProps {
+  title: string;
+  description: string;
+  ilustration: string;
+  tags: string[];
+}
+
+export function CoffeeCard({ title, description, ilustration, tags }: CoffeeCardProps) {
   const [value, setValue] = useState(1);
 
   const increment = () => setValue(value + 1);
@@ -13,12 +19,14 @@ export function CoffeeCard() {
   return (
     <CoffeeCardContainer>
       <header>
-        <img src={expressoTradicional} alt="Café Expresso Tradicional" />
-        <span>tradicional</span>
+        <img src={ilustration} alt={title} />
+        <div>
+          {tags.map(tag => { return <span>{tag}</span> })}
+        </div>
       </header>
       <div className="info">
-        <h5>Expresso Tradicional</h5>
-        <p>O tradicional café feito com água quente e grãos moídos</p>
+        <h5>{title}</h5>
+        <p>{description}</p>
       </div>
       <StyledWrapper>
         <p><span>R$</span> 9,90</p>

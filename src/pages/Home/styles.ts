@@ -19,6 +19,7 @@ export const MainContainer = styled.main`
 
   img {
     height: 22.5rem;
+    width: 29.75rem;
   }
 
   .background {
@@ -61,6 +62,6 @@ export const CoffeesContainer = styled.section`
   article {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 4rem;
+    gap: 2.5rem 2rem;
   }
 `
