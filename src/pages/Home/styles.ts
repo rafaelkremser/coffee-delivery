@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { mixins } from "../../styles/mixins";
 
 export const MainContainer = styled.main`
-  padding: 0 10rem 6rem;
+  padding-bottom: 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,7 +49,7 @@ export const TextContainer = styled.article`
 `
 
 export const CoffeesContainer = styled.section`
-  padding: 2rem 10rem 6rem;
+  padding: 2rem 0 6rem;
   display: flex;
   flex-direction: column;
   gap: 3.375rem;
